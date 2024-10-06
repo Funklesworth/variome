@@ -310,6 +310,7 @@ class VariantImporter(Importer):
 
     model = ibvlmodels.Variant
     path_component = "variants"
+    variant_id_length = model._meta.get_field('variant_id').max_length
 
     def populate_caches(self):
         # This costs a bit at startup but is necessary to enable bulk creates, which
@@ -331,8 +332,8 @@ class VariantImporter(Importer):
         ):
             if row[field] == ".":
                 row[field] = ""
-        if len(row["variant_id"]) > 255:
-            return False, "variant ID longer than 255"
+        if len(row["variant_id"]) > self.variant_id_length:
+            return False, "variant ID longer than max_length"
         return True, row
 
     def created_row_object(self, row):
