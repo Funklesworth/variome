@@ -14,7 +14,7 @@ cryptography==44.0.2
     # via django-auth-adfs
 dj-database-url==2.3.0
     # via variome (pyproject.toml)
-django==4.2.27
+django==5.2
     # via
     #   variome (pyproject.toml)
     #   dj-database-url
