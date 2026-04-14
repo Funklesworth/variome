@@ -65,8 +65,8 @@ def variant(request, id):
         annotations = annotationsResult["annotations"]
         errors.append(annotationsResult["errors"])
 
-    except Exception as e:
-        errors.append(f"Error getting annotations: {e}")
+    except Exception:
+        errors.append("Error getting annotations")
 
     try:
         gnomadFrequenciesObject = GenomicGnomadFrequency.objects.get(
