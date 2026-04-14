@@ -163,7 +163,7 @@ app/yarn-debug.log*
 app/yarn-error.log*
 
 frontend/.vite
-frontend/public
+frontend/content
 /venv2/
 /db/
 config.py

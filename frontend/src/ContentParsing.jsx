@@ -1,14 +1,14 @@
 
 import Markdown from 'react-markdown'
 import _ from 'lodash';
-import {IconMap} from '../public/ContentConfiguration';
+import {IconMap} from '../content/ContentConfiguration';
 
-const markdownContent = import.meta.glob('../public/*.md', { 
+const markdownContent = import.meta.glob('../content/*.md', { 
   eager: true, 
   query: "?raw"
 });
 
-const HomeContent = _.fromPairs(_.map(_.toPairs(import.meta.glob('../public/Home/*.md', {
+const HomeContent = _.fromPairs(_.map(_.toPairs(import.meta.glob('../content/Home/*.md', {
   eager: true,
   query: "?raw"
 })), ([key, value]) => {
