@@ -6,15 +6,17 @@ asgiref==3.8.1
     #   django-cors-headers
 certifi==2025.1.31
     # via requests
-cffi==1.17.1
+cffi==2.0.0
     # via cryptography
 charset-normalizer==3.4.1
     # via requests
-cryptography==44.0.2
-    # via django-auth-adfs
+cryptography==46.0.7
+    # via
+    #   variome (pyproject.toml)
+    #   django-auth-adfs
 dj-database-url==2.3.0
     # via variome (pyproject.toml)
-django==5.2
+django==5.2.13
     # via
     #   variome (pyproject.toml)
     #   dj-database-url
@@ -55,6 +57,8 @@ pycparser==2.22
     # via cffi
 pyjwt==2.10.1
     # via django-auth-adfs
+pymysql==1.1.2
+    # via variome (pyproject.toml)
 python-dateutil==2.9.0.post0
     # via pandas
 python-dotenv==1.1.0

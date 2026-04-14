@@ -24,6 +24,9 @@ dependencies = [
     "django-pghistory>=3.2.0",
     "python-dotenv>=1.0.1",
     "pymysql>=1.1.2",
+    # temporary pin to address https://github.com/wassermanlab/variome/security/dependabot/82
+    # Remove once all dependencies require this minimal version.
+    "cryptography>=46.0.7",
 ]
 readme = "README.md"
 requires-python = ">= 3.11"
