@@ -27,7 +27,7 @@ django==5.2.13
     #   django-pgtrigger
     #   django-tracking2
     #   djangorestframework
-django-auth-adfs==1.15.0
+django-auth-adfs==1.16.0
     # via variome (pyproject.toml)
 django-cors-headers==4.7.0
     # via variome (pyproject.toml)
@@ -45,44 +45,22 @@ idna==3.10
     # via requests
 natsort==8.4.0
     # via variome (pyproject.toml)
-numpy==2.2.4
-    # via
-    #   variome (pyproject.toml)
-    #   pandas
-pandas==2.2.3
-    # via variome (pyproject.toml)
 psycopg2-binary==2.9.10
     # via variome (pyproject.toml)
 pycparser==2.22
     # via cffi
-pyjwt==2.10.1
+pyjwt==2.12.1
     # via django-auth-adfs
 pymysql==1.1.2
     # via variome (pyproject.toml)
-python-dateutil==2.9.0.post0
-    # via pandas
 python-dotenv==1.1.0
     # via variome (pyproject.toml)
-pytz==2025.2
-    # via pandas
 requests==2.32.3
     # via django-auth-adfs
-six==1.17.0
-    # via python-dateutil
-sqlalchemy==2.0.39
-    # via
-    #   variome (pyproject.toml)
-    #   sqlalchemy-utils
-sqlalchemy-utils==0.41.2
-    # via variome (pyproject.toml)
 sqlparse==0.5.3
     # via django
 typing-extensions==4.13.0
-    # via
-    #   dj-database-url
-    #   sqlalchemy
-tzdata==2025.2
-    # via pandas
+    # via dj-database-url
 urllib3==2.3.0
     # via
     #   django-auth-adfs
