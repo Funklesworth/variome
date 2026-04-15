@@ -29,13 +29,6 @@ var define = _.mapKeys(envs, (value, key) => {
 });
 
 define = _.mapValues(define, (value, key) => {
-  if (_.isString(value)) {
-    if (value.toLowerCase() === "true") {
-      value = true;
-    } else if (value.toLowerCase() === "false") {
-      value = false;
-    }
-  }
   return JSON.stringify(value);
 });
 
