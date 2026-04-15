@@ -15,8 +15,7 @@ const envVariableDefaults = {
   BVL_TITLE: 'A Variome BVL',
   API_PATH: '/api/',
   LOGIN_PATH: '/admin/login',
-  LOGOUT_PATH: '/admin/logout',
-  PUBLIC_BVL: false
+  LOGOUT_PATH: '/admin/logout'
 };
 
 var envs = loadEnv('', '..', _.keys(envVariableDefaults));
