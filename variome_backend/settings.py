@@ -248,6 +248,8 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     f"http://localhost:{FRONTEND_PORT}",
     f"https://localhost:{FRONTEND_PORT}",
+    f"http://localhost:4173",
+    f"https://localhost:4173",
     f"http://127.0.0.1:{FRONTEND_PORT}",
     f"https://127.0.0.1:{FRONTEND_PORT}",
     "http://" + DOMAIN,

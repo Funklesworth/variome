@@ -15,7 +15,8 @@ const envVariableDefaults = {
   BVL_TITLE: 'A Variome BVL',
   API_PATH: '/api/',
   LOGIN_PATH: '/admin/login',
-  LOGOUT_PATH: '/admin/logout'
+  LOGOUT_PATH: '/admin/logout',
+  PUBLIC_BVL: false
 };
 
 var envs = loadEnv('', '..', _.keys(envVariableDefaults));
@@ -29,6 +30,13 @@ var define = _.mapKeys(envs, (value, key) => {
 });
 
 define = _.mapValues(define, (value, key) => {
+  if (_.isString(value)) {
+    if (value.toLowerCase() === "true") {
+      value = true;
+    } else if (value.toLowerCase() === "false") {
+      value = false;
+    }
+  }
   return JSON.stringify(value);
 });
 

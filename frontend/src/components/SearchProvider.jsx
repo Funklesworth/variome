@@ -3,7 +3,7 @@ import { createContext, useState, useRef, useEffect } from "react";
 
 import Constants from '../Constants';
 
-const ASSEMBLY_LABEL = Constants.assemblyVersions[2];
+const ASSEMBLY_LABEL = Constants.assemblyVersions["2"];
 
 import Api from '../Api';
 

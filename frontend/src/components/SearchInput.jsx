@@ -44,7 +44,7 @@ export default function SearchInput({ width, marginLeft, inputElementId, variant
     <TextField
       id={inputElementId}
       placeholder="Search variants"
-      variant={variant.variant_id}
+      variant="standard"
       value={inputQuery}
       onFocus={() => {
         if (_.isFunction(searchContext.onInputFocus)) {
