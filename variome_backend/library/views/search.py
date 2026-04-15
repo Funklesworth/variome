@@ -21,6 +21,7 @@ from ..serializers import (
 
 
 @api_view(["GET"])
+@login_required
 def snv_search(request):
     in_result_sets = request.GET.get("resultSets", None)
     in_query = request.GET.get("query", None)
