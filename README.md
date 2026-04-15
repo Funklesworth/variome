@@ -125,7 +125,7 @@ npm install
 2. Set up the frontend content files:
 
 ```
-cp -r public-example public
+cp -r public-example content
 ```
 
 ## Run the Frontend
@@ -140,11 +140,11 @@ It runs at localhost:3000 by default. You can press "o" and hit the enter key in
 
 ### how to customize the content
 
-You can edit the `frontend/public` files to customize according to branding, access policy information, and any other content.
+You can edit the `frontend/content` files to customize according to branding, access policy information, and any other content.
 
-Markdown format files in the /public folder are treated as full pages, available in the navigation sidebar. You can add more, rename them. To set the icons and sorting order, add them to the IconMap object in public/ContentConfiguration.js.
+Markdown format files in the /content folder are treated as full pages, available in the navigation sidebar. You can add more, rename them. To set the icons and sorting order, add them to the IconMap object in content/ContentConfiguration.js.
 
-Markdown format files in /public/Home are individual, "hard-coded" page elements on the Home page, so you shouldn't add more or rename these.
+Markdown format files in /content/Home are individual, "hard-coded" page elements on the Home page, so you shouldn't add more or rename these.
 
 ### attributions
 

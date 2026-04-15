@@ -28,6 +28,8 @@ function AppRouter() {
   const [exampleMt, setExampleMt] = useState(null);
   const [exampleSv, setExampleSv] = useState(null);
 
+
+
   useEffect(() => {
       if (!settingsFetched ){
 
@@ -43,14 +45,15 @@ function AppRouter() {
   },[_.isEmpty(exampleSnv) && _.isEmpty(pageTitle)]);
 
   useEffect(() => {
-    Api.get('user', { json: true }).then((response) => {
-      var user = _.get(response, 'user');
-      if (_.isObject(user) && _.has(user, 'email') && user.email) {
-        setUser(user);
-      } else if (_.isObject(user) && !_.has(user, 'email') ) {
-        console.log("found a logged in user, except there is no email address. Please set it to enable authenticating")
-      }
-    });
+
+      Api.get('user', { json: true }).then((response) => {
+        var user = _.get(response, 'user');
+        if (_.isObject(user) && _.has(user, 'email') && user.email) {
+          setUser(user);
+        } else if (_.isObject(user) && !_.has(user, 'email') ) {
+          console.log("found a logged in user, except there is no email address. Please set it to enable authenticating")
+        }
+      });
   }, []);
 
   function ScrollToTop(){

@@ -3,7 +3,7 @@ import { createContext, useState, useRef, useEffect } from "react";
 
 import Constants from '../Constants';
 
-const ASSEMBLY_LABEL = Constants.assemblyVersions[2];
+const ASSEMBLY_LABEL = Constants.assemblyVersions["2"];
 
 import Api from '../Api';
 
@@ -193,8 +193,7 @@ function SearchProvider({ children }) {
               console.log("reference mismatch", referenceResult.seq, _.get(parameters, "groups.ref", "").toUpperCase());
               console.log(referenceResult);
               setWarnings([...warnings, {
-                label: `⚠️ ${ASSEMBLY_LABEL} Reference allele is ${referenceResult.seq} at this position`,
-                link: `./search?q=${parameters.searchParameters.chr}-${parameters.searchParameters.pos}-${referenceResult.seq}`,
+                label: `⚠️ ${ASSEMBLY_LABEL} Reference allele is ${referenceResult.seq} at this position`
               }]);
               console.log("warnings", warnings);
             }

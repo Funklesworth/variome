@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "vite",
     "start": "vite",
-    "prebuild": "mv public/.git .public_git_temp || true",
+    "prebuild": "mv content/.git .content_git_temp || true",
     "build": "vite build",
-    "postbuild": "mv .public_git_temp public/.git || true",
+    "postbuild": "mv .content_git_temp content/.git || true",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -25,6 +25,7 @@
     "vite": "^8.0.8"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^6.0.1"
+    "@vitejs/plugin-react": "^6.0.1",
+    "vite-plugin-static-copy": "^4.0.1"
   }
 }
