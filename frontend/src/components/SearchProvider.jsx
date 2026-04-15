@@ -193,8 +193,7 @@ function SearchProvider({ children }) {
               console.log("reference mismatch", referenceResult.seq, _.get(parameters, "groups.ref", "").toUpperCase());
               console.log(referenceResult);
               setWarnings([...warnings, {
-                label: `⚠️ ${ASSEMBLY_LABEL} Reference allele is ${referenceResult.seq} at this position`,
-                link: `./search?q=${parameters.searchParameters.chr}-${parameters.searchParameters.pos}-${referenceResult.seq}`,
+                label: `⚠️ ${ASSEMBLY_LABEL} Reference allele is ${referenceResult.seq} at this position`
               }]);
               console.log("warnings", warnings);
             }

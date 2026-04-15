@@ -3,7 +3,6 @@ import { useState, useEffect, useContext } from 'react';
 import _ from 'lodash';
 
 import { TextField, List, ListItem, ListItemText, Divider, Box } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
 import { SearchContext } from './SearchProvider';
 
 import {
@@ -40,9 +39,8 @@ export default function SearchInput({ width, marginLeft, inputElementId, variant
   }, []);
 
   return (<>
-
-    <TextField
-      id={inputElementId}
+  <TextField 
+      id={inputElementId} 
       placeholder="Search variants"
       variant="standard"
       value={inputQuery}
@@ -53,10 +51,9 @@ export default function SearchInput({ width, marginLeft, inputElementId, variant
           console.log(searchContext.onInputFocus)
         }
       }}
+
       InputProps={{
-        startAdornment: (
-          <SearchIcon />
-        )
+        startAdornment:<span style={{marginRight: "8px", cursor:"default"}}>🔎</span>
       }}
       sx={{ width, marginLeft, ...sx }}
       onChange={(event) => {
@@ -64,8 +61,7 @@ export default function SearchInput({ width, marginLeft, inputElementId, variant
         searchContext.debounceUpdateSearch(event.target.value);
       }
       }
-
-    />
+      />
   </>
   );
 }
